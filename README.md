@@ -48,10 +48,10 @@ exit
 ### Finish
 
 *Files* 
-bootstrap.sh - Install/Config Ansible and Deploy env
-examples - Ansible configs and roles
-README - The file that you read
-Vagrantfile - Defines environment by Vagrant
+- bootstrap.sh - Install/Config Ansible and Deploy env
+- examples - Ansible configs and roles
+- README - The file that you read
+- Vagrantfile - Defines environment by Vagrant
 
 ### Cleaning
 vagrant halt -f;
