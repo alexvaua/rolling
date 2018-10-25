@@ -1,6 +1,6 @@
-The instruction of preparation and deployment(rolling) test environment with the simplest web service.
+The preparation and deployment(rolling) of test environment with the simplest web service.
 
-On the host node we need Vagrant for provisioning configs and VirtualBox as a HV.
+On the hosts node we need to install Vagrant and VirtualBox as a HV.
 
 We are going to provision instances according the list:
 
