@@ -1,4 +1,4 @@
-The preparation and deployment(rolling) of test environment with the simplest web service.
+## The preparation and deployment(rolling) of test environment with the simplest web service.
 
 On the hosts node we need to install Vagrant and VirtualBox as a HV.
 
