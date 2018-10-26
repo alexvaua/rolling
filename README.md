@@ -62,7 +62,7 @@ exit
 *Files* 
 - `bootstrap.sh` - Install/Config Ansible and Deploy env
 - `examples` - Ansible configs and roles
-- `README` - The file that you read
+- `README` - The file that you are reading
 - `Vagrantfile` - Defines environment by Vagrant
 
 ```
