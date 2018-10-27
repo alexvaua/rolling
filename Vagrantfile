@@ -1,7 +1,8 @@
 # Defines Vagrant environment
 
 Vagrant.configure("2") do |config|
-
+N = 3
+config.ssh.insert_key = false
   # create load balancer
   config.vm.define :lb do |lb_config|
       lb_config.vm.box = "ubuntu/trusty64"
@@ -14,15 +15,15 @@ Vagrant.configure("2") do |config|
   end
 
   # create web servers
-  (1..3).each do |i|
+  (1..N).each do |i|
     config.vm.define "web#{i}" do |node|
-        node.vm.box = "ubuntu/trusty64"
-        node.vm.hostname = "web#{i}"
-        node.vm.network :private_network, ip: "10.0.0.5#{i}"
-        node.vm.network "forwarded_port", guest: 80, host: "808#{i}"
-        node.vm.provider "virtualbox" do |vb|
-          vb.memory = "256"
-        end
+      node.vm.box = "ubuntu/trusty64"
+      node.vm.hostname = "web#{i}"
+      node.vm.network :private_network, ip: "10.0.0.5#{i}"
+      node.vm.network "forwarded_port", guest: 80, host: "808#{i}"
+      node.vm.provider "virtualbox" do |vb|
+        vb.memory = "256"
+      end
     end
   end
 
@@ -35,6 +36,12 @@ Vagrant.configure("2") do |config|
         vb.memory = "256"
       end
       man_config.vm.provision :shell, path: "bootstrap.sh"
-  end
+      man_config.vm.provision :ansible do |ansible|
+	ansible.limit = "all"
+        ansible.verbose = "v"
+        ansible.inventory_path = "examples/inventory.ini"
+        ansible.playbook = "examples/env-role.yml"
+      end
 
+  end
 end
