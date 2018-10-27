@@ -1,4 +1,4 @@
-## Zero downtime deployment (rolling) in test environment by Ansible.
+## Zero downtime deployment (rolling) within test environment by Ansible.
 
 On the hosts node we need to install Vagrant and VirtualBox as a HV.
 
