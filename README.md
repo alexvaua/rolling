@@ -18,21 +18,10 @@ sudo apt install vagrant virtualbox git -y;
 git clone https://github.com/alexvaua/rolling.git ~/;
 cd ~/rolling
 ```
-### Optionally
-Here do we have main configs:
+### Options/configs
+Here we keep main configs:
 - `examples/inventory.ini` - The inventory file where we describe hosts that are need to manage by Ansible.
 - `examples/rolling.yml` - The playbook that we use for configuring and perform the deploy(rolling) without downtime.
-
-### Commands for env preparation
-```
-# deploying the env according by Vagrant 
-sudo vagrant up
-# connect to `man` for management
-vagrant ssh man
-ansible-playbook env-role.yml
-# exit from `man`
-exit
-```
 
 ### Testing
 After successful installation and provisioning we can be able to see test page by this address:
