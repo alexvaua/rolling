@@ -14,7 +14,7 @@ Linux "Ubuntu 16.04", 1CPU, 1.5GB RAM, 8-9GB free space in /home
 How to install on Ubuntu 16.04:
 ### Instalation and deploy env on host machine
 ```
-sudo apt install vagrant virtualbox git -y;
+sudo apt install vagrant virtualbox ansible git -y;
 git clone https://github.com/alexvaua/rolling.git ~/;
 cd ~/rolling
 ```
