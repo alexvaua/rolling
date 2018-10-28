@@ -30,8 +30,8 @@ The statistic(Haproxy) of routing and balancing we should see by this address:
 (http://localhost:8080/haproxy?stats)
 
 ### Repositories
-- https://github.com/alexvaua/rolling - Main repository that contains of dployment files.
-- https://github.com/alexvaua/site - Repository that contains site that we used as example.
+- https://github.com/alexvaua/rolling - Main repository that contains the dployment files.
+- https://github.com/alexvaua/site - Repository that contains the site that we used as example.
 
 ### Deployment
 Deployment based on "release" or any branch, that should be prepared in the site repo.
