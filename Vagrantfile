@@ -36,6 +36,7 @@ config.ssh.insert_key = false
         vb.memory = "256"
       end
       man_config.vm.provision :shell, path: "bootstrap.sh"
+      man_config.vm.provision "file", source: "/root/.vagrant.d/insecure_private_key", destination: ".ssh/id_rsa"
       man_config.vm.provision :ansible do |ansible|
 	ansible.limit = "all"
         ansible.verbose = "v"
