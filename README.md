@@ -16,7 +16,8 @@ How to install on Ubuntu 16.04:
 ```
 sudo apt install vagrant virtualbox ansible git -y;
 git clone https://github.com/alexvaua/rolling.git ~/;
-cd ~/rolling
+cd ~/rolling;
+vagrant up
 ```
 ### Options/configs
 Here we keep main configs:
