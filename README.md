@@ -60,6 +60,6 @@ exit
 vagrant halt -f;
 cd ..;
 rm -rf rolling;
-sudo apt purge vagrant virtualbox git -y
+sudo apt purge vagrant virtualbox ansible git -y
 ```
 
